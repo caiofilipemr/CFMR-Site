@@ -18,6 +18,21 @@
     .col-m-12 {width: 100%;}
 }
 @media only screen and (min-width: 768px) {
+    /* Para tablets (classe diferente para poder determinar o comportamento de forma dinâmica): */
+    .col-l-1 {width: 8.33%;}
+    .col-l-2 {width: 16.66%;}
+    .col-l-3 {width: 25%;}
+    .col-l-4 {width: 33.33%;}
+    .col-l-5 {width: 41.66%;}
+    .col-l-6 {width: 50%;}
+    .col-l-7 {width: 58.33%;}
+    .col-l-8 {width: 66.66%;}
+    .col-l-9 {width: 75%;}
+    .col-l-10 {width: 83.33%;}
+    .col-l-11 {width: 91.66%;}
+    .col-l-12 {width: 100%;}
+}
+@media only screen and (min-width: 1280px) {
     /* Para desktops: */
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
@@ -36,17 +51,25 @@
     box-sizing: inherit;
 }
 body {
-  /*font-family: 'Roboto Condensed', sans-serif;*/
-  /*font-family: 'Lato', sans-serif;*/
-  /*font-family: 'Roboto', sans-serif;*/
+  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-family: 'Open Sans', sans-serif;
+  font-family: Raleway, sans-serif;
+  margin: 0;
+  letter-spacing: 2px;
+  background-color: #f1f1f1;
 }
-
+.center {
+  text-align: center;
+}
+.hide {
+  display: none !important;
+}
 [class*="container-"] {
   width: 100%;
-  padding: 0;
   margin: 0;
-  left: 0;
+  padding: 0;
 }
 
 div.container-content {
@@ -54,12 +77,14 @@ div.container-content {
   margin: 0 auto 0 auto;
 }
 
-div.container-navbar {
-  top: 0;
+.container-fixed-navbar {
   position: fixed;
-  box-shadow: 0px 5px 5px grey;
-  z-index: 1;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  height: 40px;
   background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .navbar {
@@ -68,6 +93,7 @@ div.container-navbar {
   padding: 0;
   margin: 0 auto 0 auto;
   width: 100%;
+  height: 100%;
   text-align: right;
 }
 
@@ -77,7 +103,7 @@ div.container-navbar {
 
 .navbar li a {
   display: block;
-  padding: 10px 20px;
+  padding: 10px 20px 0px 20px;
   text-decoration: none;
   color: black;
   font-weight: bold;
@@ -93,6 +119,7 @@ div.container-navbar {
   height: 2px;
   bottom: 0;
   left: 0;
+  margin-top: 5px;
   background-color: black;
   visibility: hidden;
   transform: scaleX(0);
@@ -105,7 +132,15 @@ div.container-navbar {
 }
 
 div.container-welcome {
+  left: 0;
+  margin-top: 40px;
+}
+
+div.container-welcome-slogan {
   position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
 }
 
 .welcome {
@@ -115,12 +150,7 @@ div.container-welcome {
 }
 
 .welcome-slogan {
-  position: absolute;
   width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
   color: #FFF;
 }
 
@@ -130,6 +160,7 @@ div.container-welcome {
   transition: all 0.35s ease-in-out 0s;
   text-decoration: none;
   text-align: center;
+  display: inline-block;
 }
 
 .button-ghost {
@@ -141,4 +172,86 @@ div.container-welcome {
 .button-ghost:hover {
   background-color: #fff;
   color: #000;
+}
+
+.button-ghost-black {
+  border-color: #000;
+  color: #000;
+  background-color: transparent;
+}
+
+.button-ghost-black:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.card-container {
+  display: block;
+  float: left;
+  height: 300px;
+}
+
+.blog-card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  margin: 16px;
+}
+
+.blog-card:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.blog-card:hover .blog-card-image {
+  height: 50%;
+}
+
+.blog-card:hover .blog-card-preview {
+  height: 50%;
+}
+
+.blog-card:hover div.hide {
+  display: table !important;
+}
+
+.blog-card-image {
+  background-image: url('../img/images.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70%;
+  transition: all 0.35s ease-in-out 0s;
+}
+
+.blog-card-preview {
+  overflow: hidden;
+  transition: all 0.35s ease-in-out 0s;
+  height: 30%;
+}
+
+.blog-card-preview p {
+  text-overflow: ellipsis;
+  margin: 16px;
+  padding: 0;
+  line-height: 1.2em;
+  height: 3.6em;
+  overflow: hidden;
+}
+
+.table-card-button {
+  width: 100%;
+  height: 40%;
+  padding: 0;
+  margin: 0;
+  display: table;
+}
+
+.table-cell-card-button {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.card-button {
+  width: 100%;
+  border: none;
+  color: white;
+  padding: 0;
 }
