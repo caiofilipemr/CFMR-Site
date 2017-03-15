@@ -66,6 +66,9 @@ body {
 .hide {
   display: none !important;
 }
+.lgrey {
+  background-color: rgb(220, 220, 220)
+}
 [class*="container-"] {
   width: 100%;
   margin: 0;
@@ -75,6 +78,7 @@ body {
 div.container-content {
   max-width: 1280px;
   margin: 0 auto 0 auto;
+  overflow: hidden;
 }
 
 .container-fixed-navbar {
@@ -188,12 +192,13 @@ div.container-welcome-slogan {
 .card-container {
   display: block;
   float: left;
-  height: 300px;
+  height: 332px;
 }
 
 .blog-card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   margin: 16px;
+  height: 300px;
 }
 
 .blog-card:hover {
@@ -225,6 +230,7 @@ div.container-welcome-slogan {
   overflow: hidden;
   transition: all 0.35s ease-in-out 0s;
   height: 30%;
+  background-color: white;
 }
 
 .blog-card-preview p {
