@@ -63,6 +63,10 @@ body {
 .center {
   text-align: center;
 }
+.left-align {
+  float: left;
+  overflow: hidden;
+}
 .hide {
   display: none !important;
 }
@@ -77,7 +81,12 @@ body {
   margin: 0;
   padding: 0;
 }
-
+[class*="table-"] {
+  display: table;
+}
+[class*="table-cell"] {
+  display: table-cell;
+}
 div.container-content {
   max-width: 1280px;
   margin: 0 auto 0 auto;
@@ -141,6 +150,10 @@ div.container-content {
 div.container-welcome {
   left: 0;
   margin-top: 40px;
+  background-image: url('img/artem-sapegin-180146-cropped.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 900px;
 }
 
 div.container-welcome-slogan {
@@ -250,11 +263,9 @@ div.container-welcome-slogan {
   height: 40%;
   padding: 0;
   margin: 0;
-  display: table;
 }
 
 .table-cell-card-button {
-  display: table-cell;
   vertical-align: middle;
 }
 
@@ -268,13 +279,25 @@ div.container-welcome-slogan {
 .about-card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   margin: 16px;
+  overflow: hidden;
 }
 
 .profile-image {
-  background-image: url('../img/images.jpeg');
+  background-image: url('../img/18373231.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   height: 200px;
+  width: 200px;
+  margin: 16px auto;
+  border-radius: 100%;
+}
+
+.table-about-text {
+  height: 200px;
   margin: 16px;
-  float: left;
+}
+
+.table-cell-about-text {
+  text-align: justify;
+  vertical-align: middle;
 }
