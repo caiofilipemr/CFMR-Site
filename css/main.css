@@ -66,8 +66,11 @@ body {
 .hide {
   display: none !important;
 }
-.lgrey {
+.bg-lgrey {
   background-color: rgb(220, 220, 220)
+}
+.bg-white {
+  background-color: white;
 }
 [class*="container-"] {
   width: 100%;
@@ -260,4 +263,18 @@ div.container-welcome-slogan {
   border: none;
   color: white;
   padding: 0;
+}
+
+.about-card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  margin: 16px;
+}
+
+.profile-image {
+  background-image: url('../img/images.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  margin: 16px;
+  float: left;
 }
