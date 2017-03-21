@@ -147,13 +147,31 @@ div.container-content {
   transform: scaleX(1);
 }
 
+div.container-welcome::before {
+  content: " ";
+  left: 0;
+  top: 0;
+  display: inline-block;
+  position: absolute;
+  background-image: url('../img/artem-sapegin-180146-cropped.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(20%);
+  height: 900px;
+  width: 100%;
+  z-index: -1;
+  margin-top: 40px;
+}
+
 div.container-welcome {
   left: 0;
   margin-top: 40px;
-  background-image: url('img/artem-sapegin-180146-cropped.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
   height: 900px;
+  z-index: 0;
+}
+
+div.table-container-welcome {
+  text-align: center;
 }
 
 div.container-welcome-slogan {
@@ -163,15 +181,17 @@ div.container-welcome-slogan {
   right: 0;
 }
 
+
 .welcome {
   max-width: 100%;
   height: auto;
   filter: brightness(20%);
 }
 
-.welcome-slogan {
+.table-cell-welcome-slogan {
   width: 100%;
   color: #FFF;
+  vertical-align: middle;
 }
 
 .button {
